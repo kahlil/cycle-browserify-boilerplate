@@ -1,5 +1,5 @@
 // Test template when wanting to test the DOM
-import test from 'tape';
+import test from 'tape'
 import Rx from 'rx'
 import createRenderTarget from './helper/createRenderTarget'
 import Cycle from '@cycle/core'
@@ -38,7 +38,7 @@ test(`DOM ISOLATED TESTS EXAMPLE #`, (t) => {
       t.equal(elements.length, 1, `there should only be one array`)
       const correctElement = elements[0]
       t.notEqual(correctElement, null, `the array isn\`t empty`)
-      t.notEqual(typeof correctElement, `undefined`, `the array isn\`t undefined`)
+      t.notEqual(typeof correctElement, `undefined`, `the array isn\`t undefined`) // eslint-disable-line
       t.equal(correctElement.tagName, `H2`, `the tag is h2`)
       t.equal(correctElement.textContent, `Correct`)
     })

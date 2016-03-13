@@ -1,11 +1,11 @@
 function createRenderTarget(id = null) {
-  let element = document.createElement('div');
-  element.className = 'cycletest';
+  let element = document.createElement(`div`)
+  element.className = `cycletest`
   if (id) {
-    element.id = id;
+    element.id = id
   }
-  document.body.appendChild(element);
-  return element;
+  document.body.appendChild(element)
+  return element
 }
 
 export default createRenderTarget
