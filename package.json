@@ -18,7 +18,7 @@
     "build:css:prod": "node-sass src/styles/main.scss --outFile main.css --source-map true --output build --output-style compressed",
     "watch:scss": "chokidar src/styles/*.scss -c 'npm run build:css'",
     "test": "zuul --local 8080 test/test.js",
-    "lint": "eslint src test --fix",
+    "lint": "eslint src test",
     "start": "npm-run-all clean build:css --parallel watch:scss budo"
   },
   "devDependencies": {
