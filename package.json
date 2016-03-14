@@ -52,7 +52,6 @@
     "@cycle/isolate": "^1.2.0",
     "cyclic-router": "^0.3.0",
     "history": "^1.17.0",
-    "ramda": "^0.19.1",
     "rx": "^4.0.7",
     "rx-combine-latest-obj": "^1.0.2",
     "switch-path": "^1.1.3"
