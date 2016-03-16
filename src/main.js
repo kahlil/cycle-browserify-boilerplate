@@ -1,6 +1,6 @@
 import {Observable} from 'rx'
 import navbar from './dialogue/components/navbar/navbar-index'
-import ContentRouter from './dialogue/components/content-router/content-router-index' // eslint-disable-line
+import contentRouter from './dialogue/components/content-router/content-router-index' // eslint-disable-line
 // @cycle/dom has a hyperscript-helper built in so you can
 // declare all html elements you are going to use like div, h1, h2, nav etc
 import {div} from '@cycle/dom'
@@ -21,10 +21,10 @@ const view = (nav, content) => {
 // become available variables. We return all of this in an Object
 // with DOM + History
 function main(sources) {
-  const Content = ContentRouter(sources)
-  const {path$, state$} = Content
+  const content = contentRouter(sources)
+  const {path$, state$} = content
   const Nav = navbar(sources, path$)
-  const view$ = Observable.just(view(Nav.DOM, Content.DOM))
+  const view$ = Observable.just(view(Nav.DOM, content.DOM))
 
   return {
     DOM: view$,

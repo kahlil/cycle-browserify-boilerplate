@@ -18,8 +18,18 @@
     "build:css:prod": "node-sass src/styles/main.scss --outFile main.css --source-map true --output build --output-style compressed",
     "watch:scss": "chokidar src/styles/*.scss -c 'npm run build:css'",
     "test": "zuul --local 8080 test/test.js",
-    "lint": "eslint src test",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
     "start": "npm-run-all clean build:css --parallel watch:scss budo"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "comma-dangle": [2, "only-multiline"]
+    },
+    "global": ["location", "document"]
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -31,8 +41,6 @@
     "budo": "^8.0.4",
     "chokidar-cli": "^1.2.0",
     "cyclic-history": "^0.1.0",
-    "eslint": "1.x.x",
-    "eslint-config-cycle": "^3.2.0",
     "estraverse-fb": "^1.3.1",
     "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
@@ -43,6 +51,7 @@
     "tape": "^4.4.0",
     "uglify-js": "^2.6.1",
     "watchify": "^3.7.0",
+    "xo": "^0.13.0",
     "zuul": "^3.9.0"
   },
   "dependencies": {

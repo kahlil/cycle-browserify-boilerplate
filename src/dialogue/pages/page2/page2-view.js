@@ -5,7 +5,7 @@ const view = state$ => {
     return div(`.page2`, [
       h1(`.content-subhead`, [`Page 2`]),
       h1([`This is the second Page`]),
-      h2([`Counter: ` + counter]),
+      h2([`Counter: ${counter}`]),
     ])
   })
 }

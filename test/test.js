@@ -3,9 +3,9 @@ import test from 'tape'
 import Rx from 'rx'
 import createRenderTarget from './helper/createRenderTarget'
 import Cycle from '@cycle/core'
-import {makeDOMDriver,h2, h3, h4, div} from '@cycle/dom'
+import {makeDOMDriver, h2, h3, h4, div} from '@cycle/dom'
 
-test(`DOM ISOLATED TESTS EXAMPLE #`, (t) => {
+test(`DOM ISOLATED TESTS EXAMPLE #`, t => {
   t.plan(6)
 
   function app(sources) {
@@ -23,7 +23,7 @@ test(`DOM ISOLATED TESTS EXAMPLE #`, (t) => {
     }
   }
 
-  let {sources} = Cycle.run(app, {
+  const {sources} = Cycle.run(app, {
     DOM: makeDOMDriver(createRenderTarget()),
   })
 
@@ -33,7 +33,7 @@ test(`DOM ISOLATED TESTS EXAMPLE #`, (t) => {
     .observable
     .skip(1)
     .take(1)
-    .subscribe((elements) => {
+    .subscribe(elements => {
       t.equal(Array.isArray(elements), true, `subscription output is an array`)
       t.equal(elements.length, 1, `there should only be one array`)
       const correctElement = elements[0]

@@ -15,4 +15,4 @@ const sources = {
   state$: makeStateDriver(),
 }
 
-run(Main,sources)
+run(Main, sources)

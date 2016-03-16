@@ -1,6 +1,6 @@
 import {div, h1, h2, button} from '@cycle/dom'
 
-const view = (state$) =>
+const view = state$ =>
   // mapping over our merged model to update 'count'
   state$.map(({counter}) => {
     return div(`.homepage`, [
@@ -10,7 +10,7 @@ const view = (state$) =>
         button(`.decrement .pure-button .button-error .pure-u-1-2`, `Decrement`), // eslint-disable-line
         button(`.increment .pure-button .button-success .pure-u-1-2`, `Increment`), // eslint-disable-line
         div(`.pure-u-1 .counter-table-result`, [
-          h2(`Counter: ` + counter),
+          h2(`Counter: ${counter}`),
         ]),
       ]),
     ])
