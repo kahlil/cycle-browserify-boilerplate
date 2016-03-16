@@ -1,6 +1,6 @@
 import {Observable} from 'rx'
-import navbar from './dialogue/components/navbar/navbar-index'
-import contentRouter from './dialogue/components/content-router/content-router-index' // eslint-disable-line
+import navbar from './components/navbar'
+import contentRouter from './components/content-router'
 // @cycle/dom has a hyperscript-helper built in so you can
 // declare all html elements you are going to use like div, h1, h2, nav etc
 import {div} from '@cycle/dom'
