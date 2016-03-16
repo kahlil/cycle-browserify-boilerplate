@@ -12,7 +12,7 @@ The main dependencies for this boilerplate are:
 - [node-sass](http://npm.im/node-sass) for Scss
 - [chokidar-cli](http://npm.im/chokidar-cli) for watching Sass files
 - [tape](http://npm.im/tape) and [zuul](http://npm.im/zuul) for testing
-- [Eslint](http://npm.im/eslint) with the Cycle.js plugin for linting
+- [XO](http://npm.im/xo) with some light customization for linting
 - [rimraf](http://npm.im/rimraf) for cleaning the project
 
 ## Usage
