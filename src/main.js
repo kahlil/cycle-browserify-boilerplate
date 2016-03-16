@@ -1,6 +1,6 @@
 import {Observable} from 'rx'
 import navbar from './components/navbar'
-import contentRouter from './components/content-router'
+import ContentRouter from './components/content-router'
 // @cycle/dom has a hyperscript-helper built in so you can
 // declare all html elements you are going to use like div, h1, h2, nav etc
 import {div} from '@cycle/dom'
@@ -21,10 +21,10 @@ const view = (nav, content) => {
 // become available variables. We return all of this in an Object
 // with DOM + History
 function main(sources) {
-  const content = contentRouter(sources)
-  const {path$, state$} = content
+  const Content = ContentRouter(sources)
+  const {path$, state$} = Content
   const Nav = navbar(sources, path$)
-  const view$ = Observable.just(view(Nav.DOM, content.DOM))
+  const view$ = Observable.just(view(Nav.DOM, Content.DOM))
 
   return {
     DOM: view$,

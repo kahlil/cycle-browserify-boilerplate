@@ -10,7 +10,7 @@ const routes = {
   '*': Page404,
 }
 
-function contentRouter(sources) {
+function ContentRouter(sources) {
   const {router, state$} = sources
   const {path$, value$} = router.define(routes)
   const childrenDOM$ = path$.zip(value$,
@@ -34,4 +34,4 @@ function contentRouter(sources) {
   }
 }
 
-export default contentRouter
+export default ContentRouter

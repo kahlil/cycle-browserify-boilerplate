@@ -27,7 +27,8 @@
     "space": true,
     "semicolon": false,
     "rules": {
-      "comma-dangle": [2, "only-multiline"]
+      "comma-dangle": [2, "only-multiline"],
+      "babel/new-cap": 0
     },
     "global": ["location", "document"]
   },
