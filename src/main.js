@@ -1,6 +1,6 @@
 import {Observable} from 'rx'
-import navbar from './components/navbar'
-import ContentRouter from './components/content-router'
+import navbar from './dialogue/components/navbar'
+import ContentRouter from './dialogue/components/content-router'
 // @cycle/dom has a hyperscript-helper built in so you can
 // declare all html elements you are going to use like div, h1, h2, nav etc
 import {div} from '@cycle/dom'

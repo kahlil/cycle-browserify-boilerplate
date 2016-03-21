@@ -26,11 +26,27 @@
     "esnext": true,
     "space": true,
     "semicolon": false,
+    "plugin": "immutable",
     "rules": {
-      "comma-dangle": [2, "only-multiline"],
-      "babel/new-cap": 0
+      "comma-dangle": [
+        2,
+        "only-multiline"
+      ],
+      "babel/new-cap": 0,
+      "immutable/no-let": 2,
+      "immutable/no-this": 2,
+      "immutable/no-mutation": 2
     },
-    "global": ["location", "document"]
+    "global": [
+      "location",
+      "document"
+    ],
+    "overrides": [{
+      "files": "test/helper/*.js",
+      "rules": {
+        "immutable/no-mutation": 0
+      }
+    }]
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -41,6 +57,7 @@
     "budo": "^8.0.4",
     "chokidar-cli": "^1.2.0",
     "cyclic-history": "^0.1.0",
+    "eslint-plugin-immutable": "^1.0.0",
     "estraverse-fb": "^1.3.1",
     "exorcist": "^0.4.0",
     "mkdirp": "^0.5.1",
@@ -64,7 +81,10 @@
     "switch-path": "^1.1.3"
   },
   "babel": {
-    "presets": ["ES2015", "stage-0"]
+    "presets": [
+      "ES2015",
+      "stage-0"
+    ]
   },
   "browserify": {
     "transform": [
