@@ -41,12 +41,14 @@
       "location",
       "document"
     ],
-    "overrides": [{
-      "files": "test/helper/*.js",
-      "rules": {
-        "immutable/no-mutation": 0
+    "overrides": [
+      {
+        "files": "test/helper/*.js",
+        "rules": {
+          "immutable/no-mutation": 0
+        }
       }
-    }]
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
