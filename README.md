@@ -1,5 +1,7 @@
 # Cycle.js Browserify Boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kahlil/cycle-browserify-boilerplate.svg)](https://greenkeeper.io/)
+
 While this boilerplate is heavily inspired by [cycle-webpack-boilerplate](https://github.com/Cmdv/cycle-webpack-boilerplate)
 it is currently a simpler setup. So far it is not implementing hot module reloading.
 
